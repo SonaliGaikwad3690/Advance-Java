@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Employee Managment System</title>
+     <span style="color:rgb(235, 81, 9);">
+     <style>
+        .gender {
+        color: green;
+        font-weight: bold;
+        }
+</style>
+</head>
+<body>
+
+    <h1> Employee Managment <form action=""></form></h1>
+    <hr></hr>
+    
+    form<>
+     1.Employee Id : <input type="Text" name="EmpId"> <br><br>
+     2.Employee First Name : <input type="" "Text" name="EmpName"> <br><br>
+     3.Employee Last Name : <input type ="Text" name="EmpFirstName"> <br><br>
+     4.Employee City : <input type ="Text" name="City"> <br><br>
+     5.Employee Gender:<br><br>
+      <input type="radio" name="Gender" value="Female"> Female<br><br>
+      <input type="radio" name="Gender" value="Male" > Male<br><br>
+      <input type="radio" name="Gender" value="Other" > Others<br><br>
+     6.Employee Mob No: <input type="tel" name="Mobile Number"> <br><br>
+     7.Employee Email Id : <input type="Email" name="Email Id"> <br><br>
+     8.Employee Date Of Birth: <input type="date" name="DOB"> <br><br>
+     9.Employee State : <input type="Text" name="State"> <br><br>
+     10.Employee Country: <input type ="Text" name="Country"> <br><br>
+     11.Employee Department: <input type ="Text" name="DeptName"> <br><br>
+        12.Department:
+       <Select Name="Department">
+        <option>HR</option>
+        <option>IT</option>
+        <option>Sales</option>
+        <option>finance</option>
+       </Select> <br><br>
+     13.Employee Salary : <input type="Number" name="Emp Salary"> <br><br>
+     15.Employee Joining Date : <input type="date"="Joining date"> <br><br>
+     14.Skills:<input type="checkbox" >C++
+       <input type="checkbox">Java 
+       <input type="checkbox">Python
+       <input type="checkbox">SQL
+       <br><br>
+          
+     16.Marital Status : <br><br>
+      <input type="checkbox" name="Marital" value="Unnmarried">Unnmarrid <br><br>
+      <input type="CheckBox" name="Marital" value="Married">Marrid <br><br>
+
+     17. Employee Blood Group :
+      <select name="bloodGroup">
+      <option value="">Select Blood Group</option>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>O+</option>
+      <option>O-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+      </select> <br><br>
+     
+     18. Profile Photo :
+        <input type="file" name="photo" accept="image/*"> <br><br>
+     19.Employee Type:
+       <select name="Employee type" >
+        <option value=" ">Select Employee type</option>
+        <option>Full time</option>
+        <option>part time</option>
+        <option>Contract</option>
+        <option>Appertship</option>
+       </select> <br><br>
+
+     20.Empoyee Status: <br><br>
+       <input type="radio" name="Status" value="Active">Active<br><br>
+       <input type="radio" name="Status" value="Inactive" >Inactive<br><br>
+
+     21.<button type="submit">Submit</button>
+  <body>
+  <html>
