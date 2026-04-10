@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- <form action="Login.html" method="post">
+    <h1> Registration Page........!</h1>
+    <hr></hr>
+    <hr></hr>
+    
+    <br>
+    <label>Name :</lable>
+     <input type="Name" placeholder="Entre ur name Here" name=""Full Name">
+     <br><br>
+
+     <label>Mob No :</lable>
+     <input type="number" placeholder="Entre ur Mobile Number Here" name=""Mob No">
+     <br><br>
+
+     <label>Email Id :</lable>
+     <input type="email" placeholder="Entre ur Email Id Here" name="Email id">
+     <br><br>
+
+     <label>Gender :</lable>
+     <input type="radio" name="Gender" value="Male"> Male
+     <input type="radio" name="Gender" value="Female"> Female
+     <br><br>
+
+     <label>City :</lable>
+     <input type="City" placeholder="Entre ur City Here" name="City">
+     <br><br>
+
+     <label>DOB :</lable>
+     <input type="date" name="DOB">
+     <br><br>
+
+     <label>Password:</lable>
+     <input type="password" placeholder="Entre ur Password Here" name="Password">
+     <br><br>
+
+      <label>language:</lable>
+     <input type="checkbox" name="lang" value="Engilsh"> Engilsh
+     <input type="checkbox" name="lang" value="3"> Marathi
+     <input type="checkbox" name="lang" value="Hindi"> Hindi
+     <br><br>
+
+     <button type="submit">Submit</button> -->
+
+</head>
+
+<body style="font-family: Arial; background: linear-gradient(to right, #74ebd5, #ACB6E5);">
+
+<form action="Login.html" method="post"
+style="width:400px; margin:auto; margin-top:40px; padding:25px;
+background:white; border-radius:10px; box-shadow:0px 0px 10px gray;">
+
+<h1 style="text-align:center; color:#333;">Registration Page</h1>
+
+<hr><hr><br>
+
+<label style="font-weight:bold;">Name :</label><br>
+<input type="text" placeholder="Enter your name here" name="FullName"
+style="width:100%; padding:8px; border-radius:5px; border:1px solid gray;">
+<br><br>
+
+<label style="font-weight:bold;">Mobile No :</label><br>
+<input type="number" placeholder="Enter your Mobile Number" name="MobNo"
+style="width:100%; padding:8px; border-radius:5px; border:1px solid gray;">
+<br><br>
+
+<label style="font-weight:bold;">Email Id :</label><br>
+<input type="email" placeholder="Enter your Email Id" name="Email"
+style="width:100%; padding:8px; border-radius:5px; border:1px solid gray;">
+<br><br>
+
+<label style="font-weight:bold;">Gender :</label><br>
+<input type="radio" name="Gender" value="Male"> Male
+<input type="radio" name="Gender" value="Female"> Female
+<input type="radio" name="Gender" value="Other"> Other
+<br><br>
+
+<label style="font-weight:bold;">City :</label><br>
+<input type="text" placeholder="Enter your City" name="City"
+style="width:100%; padding:8px; border-radius:5px; border:1px solid gray;">
+<br><br>
+
+<label style="font-weight:bold;">DOB :</label><br>
+<input type="date" name="DOB"
+style="width:100%; padding:8px; border-radius:5px; border:1px solid gray;">
+<br><br>
+
+<label style="font-weight:bold;">Password :</label><br>
+<input type="password" placeholder="Enter your Password" name="Password"
+style="width:100%; padding:8px; border-radius:5px; border:1px solid gray;">
+<br><br>
+
+<label style="font-weight:bold;">Language :</label><br>
+<input type="checkbox" name="lang" value="English"> English
+<input type="checkbox" name="lang" value="Marathi"> Marathi
+<input type="checkbox" name="lang" value="Hindi"> Hindi
+<br><br>
+
+<button type="submit"
+style="width:100%; padding:10px; background:#4CAF50; color:white;
+border:none; border-radius:5px; font-size:16px; cursor:pointer;">
+Submit
+</button>
+
+<br><br>
+
+<button type="reset"
+style="width:100%; padding:10px; background:#f44336; color:white;
+border:none; border-radius:5px; font-size:16px; cursor:pointer;">
+Reset
+</button>
+
+</form>
+
+
+<body>
+</html>
