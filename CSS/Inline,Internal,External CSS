@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  
+    <link rel="stylesheet" href="Style.css">
+  <!--Internal CSS 
+    <style>
+        h1{
+            background-color: rgb(53, 248, 53);
+            color: red;
+        }
+    </style> -->
+
+</head>
+  
+
+<body>
+  <!--Inline CSS
+    <h1 style="color: hwb(0 8% 8%);">Welcone to TKA.....!</h1> -->
+
+    <!-- <h1 style="background-color: #f0a7f0;">Welcome to TKA.....!</h1>
+    <h1 style="background-color: rgb(242, 53, 242);">Welcome to TKA.....!</h1>
+    <h1 style="background-color: rgb(242, 53, 242);">Welcome to TKA.....!</h1>
+    <h1 style="background-color: rgb(242, 53, 242);">Welcome to TKA.....!</h1>
+    <h1 style="background-color: rgb(242, 53, 242);">Welcome to TKA.....!</h1>
+    <h1 style="background-color: rgb(242, 53, 242);">Welcome to TKA.....!</h1>
+   -->
+    
+   <!--Internal CSS-->
+    <h1>Welcome</h1>
+    <h1>Welcome</h1>
+    <h1>Welcome</h1>
+    <h1>Welcome</h1>
+    <h1>Welcome</h1>
+
+
+
+</body>
+</html>
