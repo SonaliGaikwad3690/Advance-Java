@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>TKA</title>
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- <link rel="icon" type="image/jpg " href="https://edge-cdn.learnyst.com/learnyst-user-assets/school-assets/schools/156584/schoolLogo/1688622329687WhatsApp%20Image%202022-05-14%20at%201.51.43%20PM.jpeg" >
+-->
+
+<head>
+<body>
+
+   <h1>Welcome</h1>
+   <button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-link">Link</button>
+
+<hr><hr>
+<br><br>
+<button class="btn btn-danger">Click here</button>
+
+
+    <!--<h1 id="heading">TKA</h1> -->
+
+    <!-- <h1 class="head1">Welcome</h1>
+     <h1 class="head1">Welcome</h1>
+     <h1 class="head1">Welcome</h1>
+     <h1 class="head2">Welcome</h1>
+     <h1 class="head2">Welcome</h1>
+     <h1 class="head2">Welcome</h1>
+    <hr>
+    <br>
+    <p class="head1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui debitis autem quo voluptate quisquam pariatur vel ab doloremque molestiae velit obcaecati sunt, at quidem excepturi adipisci odio a, nulla iste?</p> -->
+    <!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam illum temporibus hic architecto voluptatibus debitis beatae eos quo ratione. Excepturi nobis minus eaque, distinctio amet voluptatum dolorem in quia tempora.</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum alias sequi excepturi dolore atque voluptate possimus a iste ipsam aut, quis vero placeat reiciendis quam aliquid eveniet neque inventore. Deserunt.</p>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed illum sit accusantium aut dolorum deleniti impedit in officia molestias delectus reprehenderit nemo sapiente, corrupti pariatur! Temporibus odio recusandae dolorum quis.</div> -->
+
+</body>
+</html>
+
+
+Style.css
+
+
+h1{
+    color: rgb(255, 111, 0);
+}
+
+th{
+    color: hsl(338, 100%, 50%);
+}
+
+
+/* Element Selector*/
+/*  body{
+    background-color: chartreuse;
+} */
+
+/* universal Selector*/
+ /* *{
+    background-color: aqua;
+} */
+
+/* group Selector*/
+/* h1,p,div{
+background-color: black;
+color: aliceblue;
+} */
+/*
+/* class Selector
+.head1{
+    background-color: rgb(180, 180, 243);
+}
+
+.head2{
+    background-color: rgb(232, 68, 169);
+} */
+
+/* id Selector
+#heading{
+    color: rgb(65, 230, 175);
+} */
+
+
+/*h1{
+color: lab(47.76% 65.69 33.06);
+background-color: rgb(217, 234, 90);
+padding-top: 200px;
+padding-bottom: 200px;
+padding-left: 400px;
+
+/* margin-top:100px;
+margin-left: 400px; */
+} */
+
+
+
