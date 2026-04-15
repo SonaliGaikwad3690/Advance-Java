@@ -1,0 +1,36 @@
+package com.tka;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Student {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
+	//1.Register and Load Driver Class
+	
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	System.out.println("Driver Class Loaded Successfully...!");
+	
+	//2. get Connections Using Connection(I)
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch426","root", "Sonu@2002");
+	
+	// 3. Used Statement & PreaperdStatement
+	 Statement s = con.createStatement();
+	 
+	 //4.Generate Queries
+	 int checked = s.executeUpdate("insert into Student(id,name,city)values(124,'Radha','Nashik')");
+	 if(checked>0) {
+		 System.out.println("Data inserted...!");
+	 }else {
+		 System.out.println("Data Not Inserted...!");
+	   }
+	 
+	 // 5. close all connection
+	 con.close();
+	 
+	}
+}
+     
