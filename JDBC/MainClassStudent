@@ -1,0 +1,14 @@
+package com.tka;
+
+import java.sql.SQLException;
+
+public class MainClassStudent {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Student s = new Student();
+//		s.insertData();
+//		s.deleteData();
+//		s.updateData();
+		
+	}
+}
