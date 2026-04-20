@@ -1,0 +1,15 @@
+package com.Controller;
+
+import com.Service.StudentService;
+
+public class StudentController {
+
+	public static void main(String[] args) throws Exception {
+		StudentService ss = new StudentService();
+//		s.insertData();
+//		s.deleteData();
+//		s.updateData();
+		ss.getAllData();
+		
+	}
+}
