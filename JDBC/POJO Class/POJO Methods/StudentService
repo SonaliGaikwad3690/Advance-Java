@@ -1,0 +1,27 @@
+package com.Service;
+
+import com.Dao.StudentDao;
+import com.Entity.Student;
+
+public class StudentService {
+
+	public void insertData(Student s) throws Exception {
+		StudentDao sd = new StudentDao();
+		sd.insertData(s);
+	}
+
+	public void deleteData(int id) throws Exception {
+		StudentDao sd = new StudentDao();
+		sd.deleteData(id);
+	}
+
+	public void updateData(Student s) throws Exception {
+		StudentDao sd = new StudentDao();
+		sd.updateData(s);
+	}
+
+	public void getAllData() throws Exception {
+		StudentDao sd = new StudentDao();
+		sd.getAllRecord();
+	}
+}
