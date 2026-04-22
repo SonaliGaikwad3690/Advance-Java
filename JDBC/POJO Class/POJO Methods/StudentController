@@ -1,0 +1,39 @@
+package com.Controller;
+
+import java.util.Scanner;
+
+import com.Entity.Student;
+import com.Service.StudentService;
+
+public class StudentController {
+	public static void main(String[] args) throws Exception {
+
+	StudentService ss = new StudentService();
+	try (Scanner sc = new Scanner(System.in)) {
+//		System.out.println("enter id name & city");
+//		int id = sc.nextInt();
+//		sc.nextLine();
+//		String name = sc.nextLine();
+//		String city = sc.nextLine();
+		
+		System.out.println("Enter ID to Delete:");
+		int id = sc.nextInt();
+		sc.nextLine();
+
+//		System.out.println("Enter new Name:");
+//		String name = sc.nextLine();
+//
+//		System.out.println("Enter new City:");
+//		String city = sc.nextLine();
+
+//		1Student s = new Student(id, name, city);
+//		ss.insertData(s);
+	   ss.deleteData(id);   
+//	   ss.updateData(s);
+//     ss.getAllData();
+	}
+   
+	
+	}
+
+}
