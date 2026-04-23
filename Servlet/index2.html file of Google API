@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="search" method="get">
+ <h1> Google API </h1>
+ <br><hr>
+ <br>
+  <label>Search Here</label>
+  <input type="text" placeholder="Search here" name="MySearch">
+  <button>Submit</button>
+  </form>
+</body>
+</html>
