@@ -1,0 +1,272 @@
+package com.entity;
+
+import jakarta.persistence.*;
+import java.util.Date;
+
+@Entity
+//@Table(name = "employee")
+public class Employee {
+
+	  @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    int empId;
+
+	    String firstName;
+	    String lastName;
+	    String gender;
+	    String email;
+	    String phoneNumber;
+
+	    String address;
+	    String city;
+	    String state;
+	    String country;
+	    String zipCode;
+
+	    String department;
+	    String designation;
+
+	    double salary;
+	    String employmentType;
+
+	    @Temporal(TemporalType.DATE)
+	    Date joiningDate;
+
+	    @Temporal(TemporalType.DATE)
+	    Date dateOfBirth;
+
+	    String managerName;
+	    String workLocation;
+	    String status;
+
+	    String emergencyContact;
+
+	// Default Constructor
+	public Employee() {
+	}
+
+	public Employee(int empId, String firstName, String lastName, String gender, String email, String phoneNumber,
+			String address, String city, String state, String country, String zipCode, String department,
+			String designation, double salary, String employmentType, Date joiningDate, Date dateOfBirth,
+			String managerName, String workLocation, String status, String emergencyContact) {
+       super();
+		this.empId = empId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.gender = gender;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+		this.zipCode = zipCode;
+		this.department = department;
+		this.designation = designation;
+		this.salary = salary;
+		this.employmentType = employmentType;
+		this.joiningDate = joiningDate;
+		this.dateOfBirth = dateOfBirth;
+		this.managerName = managerName;
+		this.workLocation = workLocation;
+		this.status = status;
+		this.emergencyContact = emergencyContact;
+	}
+
+	// Getters and Setters
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public String getEmploymentType() {
+		return employmentType;
+	}
+
+	public void setEmploymentType(String employmentType) {
+		this.employmentType = employmentType;
+	}
+
+	public Date getJoiningDate() {
+		return joiningDate;
+	}
+
+	public void setJoiningDate(Date joiningDate) {
+		this.joiningDate = joiningDate;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getManagerName() {
+		return managerName;
+	}
+
+	public void setManagerName(String managerName) {
+		this.managerName = managerName;
+	}
+
+	public String getWorkLocation() {
+		return workLocation;
+	}
+
+	public void setWorkLocation(String workLocation) {
+		this.workLocation = workLocation;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getEmergencyContact() {
+		return emergencyContact;
+	}
+
+	public void setEmergencyContact(String emergencyContact) {
+		this.emergencyContact = emergencyContact;
+	}
+	
+	   @Override
+	    public String toString() {
+	        return "Employee{" +
+	                "empId=" + empId +
+	                ", firstName='" + firstName + '\'' +
+	                ", lastName='" + lastName + '\'' +
+	                ", gender='" + gender + '\'' +
+	                ", email='" + email + '\'' +
+	                ", phoneNumber='" + phoneNumber + '\'' +
+	                ", address='" + address + '\'' +
+	                ", city='" + city + '\'' +
+	                ", state='" + state + '\'' +
+	                ", country='" + country + '\'' +
+	                ", zipCode='" + zipCode + '\'' +
+	                ", department='" + department + '\'' +
+	                ", designation='" + designation + '\'' +
+	                ", salary=" + salary +
+	                ", employmentType='" + employmentType + '\'' +
+	                ", joiningDate=" + joiningDate +
+	                ", dateOfBirth=" + dateOfBirth +
+	                ", managerName='" + managerName + '\'' +
+	                ", workLocation='" + workLocation + '\'' +
+	                ", status='" + status + '\'' +
+	                ", emergencyContact='" + emergencyContact + '\'' +
+	                '}';
+	   }
+}
