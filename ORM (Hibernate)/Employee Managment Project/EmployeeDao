@@ -1,0 +1,139 @@
+package com.dao;
+
+import java.sql.Date;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.MutationQuery;
+import org.hibernate.query.Query;
+
+import com.entity.Employee;
+
+
+public class EmployeeDao {
+
+	public void insertData() {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Employee.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+
+		String hqlQuery = "INSERT INTO employee "
+				+ "(firstName, lastName, gender, email, phoneNumber, address, city, state, country, zipCode, department, designation, salary, employmentType, joiningDate, dateOfBirth, managerName, workLocation, status) "
+				+ "VALUES (:fn, :ln, :gen, :email, :phone, :add, :city, :state, :country, :zip, :dept, :desg, :sal, :empType, :joinDate, :dob, :mgr, :loc, :status)";
+
+		MutationQuery query = ss.createNativeMutationQuery(hqlQuery);
+
+		query.setParameter("fn", "Payal");
+		query.setParameter("ln", "Chavha");
+		query.setParameter("gen", "Female");
+		query.setParameter("email", "payal@gmail.com");
+		query.setParameter("phone", "988921119");
+		query.setParameter("add", "Kolhapur");
+		query.setParameter("city", "Kolhapur");
+		query.setParameter("state", "Maharashtra");
+		query.setParameter("country", "India");
+		query.setParameter("zip", "403221");
+		query.setParameter("dept", "AssisatnceManager");
+		query.setParameter("desg", "JR");
+		query.setParameter("sal", 90000);
+		query.setParameter("empType", "Full-time");
+		query.setParameter("joinDate", new java.util.Date());
+		query.setParameter("dob", new java.util.Date());
+		query.setParameter("mgr", "Hiral");
+		query.setParameter("loc", "Office");
+		query.setParameter("status", "Active");
+
+		query.executeUpdate();
+		tr.commit();
+		ss.clear();
+		System.out.println("Inserted Data...!");
+
+	}
+
+	public void deleteData() {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Employee.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+
+
+		String hqlQuery = "delete from employee where empId=:empId";
+		MutationQuery query = ss.createNativeMutationQuery(hqlQuery);
+		query.setParameter("empId", 2);
+		query.executeUpdate();
+		tr.commit();
+		ss.clear();
+		System.out.println("Deleted Data...!");
+	}
+
+	public void updateData() {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Employee.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+
+		String hqlQuery = "update employee set status=:status where empId=:empId";
+		MutationQuery query = ss.createNativeMutationQuery(hqlQuery);
+		query.setParameter("empId", 1);
+		query.setParameter("status", "InActive");
+
+		query.executeUpdate();
+
+		tr.commit();
+		ss.clear();
+		System.out.println("Updated Data...!");
+	}
+
+	public void getSingleRecord() {
+		Configuration cfg = new Configuration();
+		cfg.configure();
+		cfg.addAnnotatedClass(Employee.class);
+
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+
+
+		String hqlQuery = "from Employee where empId=:empId";
+		
+		org.hibernate.query.Query<Employee> query = ss.createQuery(hqlQuery);
+		 query.setParameter("empId", 1);
+		 Employee e = query.getSingleResult();
+         System.out.println(e);
+		 
+		tr.commit();
+		ss.close();
+	}
+	
+	public void getAllRecord() {
+		Configuration cfg = new Configuration();
+		cfg.configure();
+		cfg.addAnnotatedClass(Employee.class);
+
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+
+
+		String hqlQuery = "from Employee";
+		
+		Query<Employee> query = ss.createQuery(hqlQuery);
+		List <Employee> list= query.list();
+		for (Employee employee : list) {
+			System.out.println(employee);
+		}
+		 
+		tr.commit();
+		ss.close();
+	}
+}
