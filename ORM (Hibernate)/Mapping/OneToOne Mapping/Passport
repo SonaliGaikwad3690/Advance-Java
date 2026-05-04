@@ -1,0 +1,58 @@
+package com.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Passport {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	int passportId;
+	String passportNumber;
+	
+	
+	public Passport() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Passport(int passportId, String passportNumber) {
+		super();
+		this.passportId = passportId;
+		this.passportNumber = passportNumber;
+	}
+
+
+	public int getPassportId() {
+		return passportId;
+	}
+
+
+	public void setPassportId(int passportId) {
+		this.passportId = passportId;
+	}
+
+
+	public String getPassportNumber() {
+		return passportNumber;
+	}
+
+
+	public void setPassportNumber(String passportNumber) {
+		this.passportNumber = passportNumber;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Passport [passportId=" + passportId + ", passportNumber=" + passportNumber + "]";
+	}
+	
+	
+	
+	
+	
+}
