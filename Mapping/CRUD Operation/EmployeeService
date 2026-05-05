@@ -1,0 +1,25 @@
+package com.service;
+
+import com.dao.EmployeeDao;
+import com.entity.Employee;
+
+public class EmployeeService {
+
+
+	 EmployeeDao dao = new EmployeeDao();
+
+	    public void insertData(Employee emp) {
+	        dao.insertData(emp);
+	    }
+
+	    public void deleteData(int id) {
+	        dao.deleteData(id);
+	    }
+
+	    public void updateData(int id, String name) {
+	        dao.updateData(id, name);
+	    }
+	    public Employee getData(int id) {
+	        return dao.get(id);   // ✔ correct call
+	    }
+}
