@@ -1,0 +1,85 @@
+package com.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.entity.Address;
+import com.entity.Employee;
+
+public class EmployeeDao {
+
+	public void insertData(Employee emp) {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Employee.class);
+		cfg.addAnnotatedClass(Address.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+		
+//		Employee emp = ss.get(Employee.class);
+		ss.persist(emp);
+		tr.commit();
+		ss.clear();
+		System.out.println("Inserted Data...!");
+
+	}
+	
+	public Employee getData(int id) {
+	    Configuration cfg = new Configuration();
+	    cfg.addAnnotatedClass(Employee.class);
+	    cfg.addAnnotatedClass(Address.class);
+	    cfg.configure("hibernate.cfg.xml");
+
+	    SessionFactory sf = cfg.buildSessionFactory();
+	    Session ss = sf.openSession();
+
+	    Employee emp = ss.get(Employee.class, id);
+
+	    ss.close();
+	    return emp;   // ✔ return data
+	}
+	
+	public void updateData(int id,String name) {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Employee.class);
+		cfg.addAnnotatedClass(Address.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+		
+		Employee emp = ss.get(Employee.class, id);
+        emp.setName(name);
+        ss.merge(emp);
+		tr.commit();
+		ss.clear();
+		System.out.println("Update Data...!");
+
+	}
+	public void deleteData(int id) {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Employee.class);
+		cfg.addAnnotatedClass(Address.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+		
+		Employee emp = ss.get(Employee.class, id);
+//		ss.delete(emp);
+		ss.remove(emp);
+		tr.commit();
+		ss.clear();
+		System.out.println("Delete Data...!");
+
+	}
+
+	public Employee get(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	 
+}
