@@ -1,0 +1,29 @@
+package com.service;
+
+import com.dao.BookDao;
+import com.entity.Book;
+
+public class BookService {
+
+	public void insertData(Book b) {
+		BookDao bd = new BookDao();
+		bd.insertData(b);
+		
+	}
+
+	public void deleteData(int bookId) {
+		BookDao bd = new BookDao();
+		bd.deleteData(bookId);
+	}
+
+	public void updateData(int bookId) {
+		BookDao bd = new BookDao();
+		bd.updateData(bookId);
+	}
+
+	public void getSingleData(int bookId) {
+		BookDao bd = new BookDao();
+		bd.getSingleRecord(bookId);
+	}
+
+}
