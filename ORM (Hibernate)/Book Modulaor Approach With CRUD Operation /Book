@@ -1,0 +1,59 @@
+package com.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity // Table Create
+
+public class Book {
+
+	@Id // mark as Primary key
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int bookId;
+	String bookTitle;
+	double price;
+
+	public Book() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Book(int bookId, String bookTitle, double price) {
+		super();
+		this.bookId = bookId;
+		this.bookTitle = bookTitle;
+		this.price = price;
+	}
+
+	public int getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+
+	public String getBookTitle() {
+		return bookTitle;
+	}
+
+	public void setBookTitle(String bookTitle) {
+		this.bookTitle = bookTitle;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", bookTitle=" + bookTitle + ", price=" + price + "]";
+	}
+
+}
