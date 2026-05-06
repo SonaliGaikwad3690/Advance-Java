@@ -1,0 +1,58 @@
+package com.main;
+
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.entity.Course;
+import com.entity.Student;
+
+
+
+public class MainClassStudCourse {
+
+	public static void main(String[] args) {
+		
+	Configuration cfg = new Configuration();
+	cfg.configure();
+	cfg.addAnnotatedClass(Student.class);
+	cfg.addAnnotatedClass(Course.class);
+	
+	SessionFactory sf = cfg.buildSessionFactory();
+	 Session ss = sf.openSession();
+	   org.hibernate.Transaction tr = ss.beginTransaction();
+	 
+	  // Create Courses
+     Course c1 = new Course();
+     c1.setCourseName("Java");
+     Course c2 = new Course();
+     c2.setCourseName("SQL");
+
+     // Create Student
+     Student s1 = new Student();
+     s1.setStudId(102);
+     s1.setName("Sonal");
+     
+     Set<Course> set = new HashSet<>();
+     set.add(c1);
+     set.add(c2);
+     
+    
+     
+     s1.setCourses(set);
+     
+    // ss.save(set);
+//     ss.save(s1);
+     ss.persist(c1);
+     ss.persist(c2);
+     ss.persist(s1);
+
+	 tr.commit();
+	 ss.clear();
+	 System.out.println("data Inserted....!");
+   }
+}
