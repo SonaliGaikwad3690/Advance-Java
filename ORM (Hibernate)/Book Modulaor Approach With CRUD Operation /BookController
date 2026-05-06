@@ -1,0 +1,73 @@
+package com.controller;
+
+import java.util.Scanner;
+
+import com.entity.Book;
+import com.service.BookService;
+
+public class BookController {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		while (true) {
+			System.out.println("------ Menu------");
+			System.out.println("Insert 1. Add Book Details");
+			System.out.println("Insert 2. get Book by id");
+			System.out.println("Insert 3. update Book Details");
+			System.out.println("Insert 4. delete Book by id");
+			System.out.println("Insert 5. exist");
+			System.out.println("Enter a choice");
+			int click = sc.nextInt();
+
+			if (click == 1) {
+				System.out.println("Enter Book Id..!");
+				int id = sc.nextInt();
+				sc.nextLine();
+
+				System.out.println("Enter a Book Title..!");
+				String title = sc.nextLine();
+
+				System.out.println("Enter a Book Price..!");
+				double price = sc.nextDouble();
+
+				Book b = new Book(id, title, price);
+
+				BookService bs = new BookService();
+				bs.insertData(b);
+			}
+
+			else if (click == 2) {
+				System.out.println("Entre a book Id");
+				int id = sc.nextInt();
+				BookService bs = new BookService();
+				bs.getSingleData(id);
+			}
+
+			else if (click == 3) {
+				System.out.println("Enter a BookId...!");
+				int id = sc.nextInt();
+
+//				System.out.println("Enter a Updated title ...!");
+//				String title = sc.nextLine();
+//               sc.nextLine();
+				System.out.println("Enter a Updated Price...!");
+				double price = sc.nextDouble();
+
+				BookService bs = new BookService();
+				bs.updateData(id);
+
+			} else if (click == 4) {
+				System.out.println("Enter a Id ...!");
+				int id = sc.nextInt();
+				BookService bs = new BookService();
+				bs.deleteData(id);
+
+			} else if (click == 5) {
+				System.out.println("Exit");
+				break;
+			}
+
+		}
+	}
+}
