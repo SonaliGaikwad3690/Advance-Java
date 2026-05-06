@@ -1,0 +1,82 @@
+package com.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.entity.Book;
+
+
+public class BookDao {
+
+	public void insertData(Book b) {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Book.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+		
+		
+//		ss.save(s);
+		ss.persist(b);
+		tr.commit();
+		ss.clear();
+		System.out.println("Inserted Data...!");
+		
+	}
+	
+	public void deleteData(int bookId) {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Book.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+		
+       Book b = ss.get(Book.class, bookId);
+//		ss.save(s);
+		ss.remove(b);;
+		tr.commit();
+		ss.clear();
+		System.out.println("Deleted Data...!");
+	}
+	
+	public void updateData(int bookId) {
+		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Book.class);
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+		
+//		int id = 2;
+		Book b = ss.get(Book.class, bookId);
+//		b.setBookTitle(b.getBookTitle());
+		b.setPrice(b.getPrice());
+		
+//		ss.save(s);
+		ss.merge(b);
+		tr.commit();
+		ss.clear();
+		System.out.println("Updated Data...!");
+	}
+	
+	public void getSingleRecord(int bookId) {
+		Configuration cfg = new Configuration();
+		cfg.configure();
+		cfg.addAnnotatedClass(Book.class);
+
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session ss = sf.openSession();
+		Transaction tr = ss.beginTransaction();
+
+//		int id = 2;
+		Book b = ss.get(Book.class, bookId);
+		System.out.println(b);
+
+		tr.commit();
+		ss.close();
+	}
+}
