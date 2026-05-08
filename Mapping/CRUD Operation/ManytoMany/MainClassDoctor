@@ -1,0 +1,48 @@
+package com.main;
+
+import java.util.Arrays;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.entity.Doctor;
+import com.entity.Patient;
+
+public class Test {
+
+    public static void main(String[] args) {
+
+        Configuration cfg = new Configuration();
+        cfg.configure();
+
+        cfg.addAnnotatedClass(Doctor.class);
+        cfg.addAnnotatedClass(Patient.class);
+
+        SessionFactory sf = cfg.buildSessionFactory();
+        Session ss = sf.openSession();
+
+        Transaction tr = ss.beginTransaction();
+
+        // Patients
+        Patient p1 = new Patient("Rahul", "Fever");
+        Patient p2 = new Patient("Priya", "Diabetes");
+
+        // Doctor
+        Doctor d1 = new Doctor(
+                "Dr. Sharma",
+                "General Physician",
+                Arrays.asList(p1, p2)
+        );
+
+        ss.persist(d1);
+
+        tr.commit();
+
+        System.out.println("Data Inserted Successfully");
+
+        ss.close();
+        sf.close();
+    }
+}
