@@ -1,0 +1,9 @@
+package com.jdk;
+
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan("com.jdk")
+public class Myconfig {
+
+	
+}
