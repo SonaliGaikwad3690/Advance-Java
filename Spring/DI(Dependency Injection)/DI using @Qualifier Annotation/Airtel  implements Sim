@@ -1,0 +1,14 @@
+package com.jdk;
+
+import org.springframework.stereotype.Component;
+
+@Component("airetl")
+public class Airtel  implements Sim{
+
+	@Override
+	public String calling() {
+		// TODO Auto-generated method stub
+		return "Your are Calling Airtel";
+	}
+
+}
