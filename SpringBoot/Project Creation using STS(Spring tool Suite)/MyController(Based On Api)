@@ -1,0 +1,117 @@
+package com.tka;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MyController {
+
+	@GetMapping("/html")
+	public String firstApi() {
+		return "Html Stands for Hyper text markup language...!";
+		
+	}
+	@PatchMapping("/oops")
+	public String oops() {
+		return "Everything in java based on object and classes...!";
+		
+	}
+	
+	@PostMapping("/css")
+	public String secondtApi() {
+		return "CSS Stands For the Cascading Style Sheet...!";
+		
+	}
+	@DeleteMapping("/sql")
+	public String thirdApi() {
+		return "SQL Stands for the Structaral Query language...!";
+		
+	}
+	@PatchMapping("/java")
+	public String fourthApi() {
+		return "JAVA is One of the Most Powerfull language...!";
+		
+	}
+	@PutMapping("/orm")
+	public String ormApi() {
+		return "ORM is an Hibernate Framework...!";
+		
+	}
+	
+	@PutMapping("/jsp")
+	public String jspApi() {
+		return "JSP Stands for Java Server Pages...!";
+		
+	}
+	@PostMapping("/github")
+	public String github() {
+		return "Github is a code hosting platform ...!";
+		
+	}
+	
+	@PutMapping("/git")
+	public String git() {
+		return "Git is a version control system...!";
+		
+	}
+	@GetMapping("/bootsrap")
+	public String bootsrap() {
+		return "Bootsrap is css framework...!";
+		
+	}
+	@PatchMapping("/angular")
+	public String angular() {
+		return "Angular is an fronted Framework...!";
+		
+	}
+	@DeleteMapping("/docker")
+	public String fifthApi() {
+		return "docker is a conatiner platform...!";
+		
+	}
+	
+	@PutMapping("/react")
+	public String react() {
+		return "react is a javaScript libraries...!";
+		
+	}
+	
+	@PatchMapping("/JDBC")
+	public String jdbc() {
+		return "JDBC is an DB connection...!";
+		
+	}
+	@DeleteMapping("/rest")
+	public String rest() {
+		return "REST Api is Lightweight...!";
+		
+	}
+	
+	@GetMapping("/json")
+	public String json() {
+		return "JSON is an JavaScript Object Notation...!";	
+	}
+	
+	@PatchMapping("/api")
+	public String api() {
+		return "API stands for the Application Programming Interface...!";	
+	}
+	
+	@GetMapping("/spring")
+	public String spring() {
+		return "Srping is Java Framework...!";	
+	}
+	@PostMapping("/servlet")
+	public String servlet() {
+		return "Servlet is an Server side Techology...!";	
+	}
+	@GetMapping("/springBoot")
+	public String springBoot() {
+		return "SrpingBoot is  an Adavnced Version of Spring ...!";	
+	}
+	
+}
