@@ -1,0 +1,103 @@
+package com.tka.dao;
+
+import java.util.List;
+
+import org.apache.catalina.User;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.tka.entity.Order;
+
+
+
+@Repository
+public class OrderDao {
+
+	@Autowired
+	SessionFactory factory;
+
+	public String insertData(Order o) {
+		Session ss = factory.openSession();
+		Transaction tr = ss.beginTransaction();
+
+		ss.persist(o);
+		tr.commit();
+		ss.close();
+
+		return "data inserted ...! ";
+
+	}
+
+	public String deleteData(Long id) {
+		Session ss = factory.openSession();
+		Transaction tr = ss.beginTransaction();
+
+		Order o = ss.get(Order.class, id);
+
+		ss.remove(o);
+
+		tr.commit();
+		ss.close();
+
+		return "data deleted ...! ";
+
+	}
+
+	public String updateData(Order o, Long id) {
+		Session ss = factory.openSession();
+		Transaction tr = ss.beginTransaction();
+
+		Order o1 = ss.get(Order.class, id);
+		o1.setCustomerName(o1.getCustomerName());
+	    o1.setFoodItem(o1.getFoodItem());
+		o1.setQuantity(o1.getQuantity());;
+		o1.setTotalPrice(o1.getTotalPrice());
+		o1.setStatus(o1.getStatus());
+
+		ss.merge(o);
+
+		tr.commit();
+		ss.close();
+
+		return "data updated ...! ";
+
+	}
+
+	public Order getSingleData(Long id) {
+		Session ss = factory.openSession();
+		Transaction tr = ss.beginTransaction();
+
+		String hqlQuery = "from Order where id=:id";
+
+		Query<Order> query = ss.createQuery(hqlQuery, Order.class);
+		query.setParameter("id", id);
+		Order oo = query.getSingleResult();
+
+		tr.commit();
+		ss.close();
+
+		return oo;
+
+	}
+
+	public List<Order> getAllData() {
+		Session ss = factory.openSession();
+		Transaction tr = ss.beginTransaction();
+
+		String hqlQuery = "from Order";
+
+		Query<Order> query = ss.createQuery(hqlQuery, Order.class);
+		List<Order> list = query.getResultList();
+
+		tr.commit();
+		ss.close();
+
+		return list;
+
+	}
+
+}
