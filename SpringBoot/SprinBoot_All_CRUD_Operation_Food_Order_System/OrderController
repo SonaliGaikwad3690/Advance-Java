@@ -1,0 +1,56 @@
+package com.tka.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tka.entity.Order;
+import com.tka.service.OrderService;
+
+@RestController
+@RequestMapping("/order")
+public class OrderController {
+
+	@Autowired
+	OrderService service;
+
+	@PostMapping("/register")
+	public String insertData(@RequestBody Order o) {
+		String msg = service.insertData(o);
+		return msg;
+	}
+
+	@DeleteMapping("dltData/{id}")
+	public String deleteData(@PathVariable Long id) {
+		String msg = service.deleteData(id);
+		return msg;
+	}
+
+	@PutMapping("/update/{id}")
+	public String updateData(@RequestBody Order o, @PathVariable Long id) {
+		String msg = service.updateData(o, id);
+		return msg;
+	}
+
+	@GetMapping("/getSingleRecord")
+	public Order getSingleRecord(@RequestParam Long id) {
+		Order oo = service.getSingleData(id);
+		return oo;
+	}
+
+	@GetMapping("/getAllRecord")
+	public List<Order> getAllRecord() {
+		List<Order> list = service.getAllData();
+		return list;
+	}
+
+}
