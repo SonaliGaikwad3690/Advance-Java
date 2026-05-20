@@ -1,0 +1,48 @@
+package com.tka.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.tka.dao.EmployeeRepository;
+import com.tka.entities.Employee;
+
+@Service
+public class EmployeeService {
+
+	@Autowired
+	EmployeeRepository repo;
+
+	public String insertData(Employee e) {
+        repo.save(e);
+		return "Data inserted ...!";
+	}
+	
+	public String deleteData(int id) {
+        repo.deleteById(id);
+		return "Data Deleted ...!";
+	}
+	
+	public String updateData(Employee e , int id) {
+        Employee e1 = repo.getById(id);
+        e1.setName(e.getName());
+        e1.setEmpId(e.getEmpId());
+        e1.setCity(e.getCity());
+        e1.setSalary(e.getSalary());
+        repo.save(e1);
+        
+		return "Data Updated ...!";
+	}
+	
+	public Optional<Employee> fetchSingleRecord(int id) {
+		
+       return repo.findById(id);
+		
+	}
+	public List<Employee> fetchAllRecord() {
+		
+	       return repo.findAll();
+			
+		}
+}
