@@ -1,0 +1,21 @@
+
+ORM Hibernate
+
+public class Studentdao{
+
+public static void main (String args(){
+Congiguration cfg = new Configuration ();
+cfg.addAnnotationClass(Student.Class);
+cfg.configure();
+
+SessionFactory sf = cfg.buildSessionFactory();
+Session ss = sf.openSession();
+Transction tr = ss.beginTransaction();
+
+ss.save();
+tr.commit();
+ss.close();
+
+    }
+
+}
