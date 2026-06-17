@@ -1,0 +1,17 @@
+p{
+   color: red;
+
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
