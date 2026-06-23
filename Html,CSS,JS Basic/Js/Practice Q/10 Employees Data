@@ -1,0 +1,115 @@
+
+console.log("Hello JS");
+const employees = [
+  {
+    id: 101,
+    name: "Amit Sharma",
+    age: 28,
+    department: "IT",
+    salary: 55000,
+    city: "Pune"
+  },
+  {
+    id: 102,
+    name: "Priya Verma",
+    age: 25,
+    department: "HR",
+    salary: 45000,
+    city: "Mumbai"
+  },
+  {
+    id: 103,
+    name: "Rahul Patil",
+    age: 32,
+    department: "Finance",
+    salary: 70000,
+    city: "Nagpur"
+  },
+  {
+    id: 104,
+    name: "Sneha Joshi",
+    age: 29,
+    department: "Marketing",
+    salary: 52000,
+    city: "Delhi"
+  },
+  {
+    id: 105,
+    name: "Karan Singh",
+    age: 35,
+    department: "Sales",
+    salary: 60000,
+    city: "Bengaluru"
+  },
+  {
+    id: 106,
+    name: "Neha Gupta",
+    age: 27,
+    department: "IT",
+    salary: 58000,
+    city: "Hyderabad"
+  },
+  {
+    id: 107,
+    name: "Vikas Yadav",
+    age: 31,
+    department: "Support",
+    salary: 48000,
+    city: "Chennai"
+  },
+  {
+    id: 108,
+    name: "Anjali Mehta",
+    age: 26,
+    department: "HR",
+    salary: 47000,
+    city: "Ahmedabad"
+  },
+  {
+    id: 109,
+    name: "Rohit Kulkarni",
+    age: 30,
+    department: "IT",
+    salary: 65000,
+    city: "Nashik"
+  },
+  {
+    id: 110,
+    name: "Pooja Deshmukh",
+    age: 33,
+    department: "Finance",
+    salary: 72000,
+    city: "Indore"
+  }
+];
+
+console.log(employees);
+
+let filteredEmployees = employees.filter(employee => employee.department === "IT");
+console.log(filteredEmployees);
+
+employees.forEach(employee => {
+  console.log(employee);
+});
+
+
+employees.forEach(emp => console.log(emp.name));
+employees.forEach(emp => console.log(emp.department));
+
+employees.forEach(emp => {
+    console.log(`${emp.name} - ${emp.department} - ${emp.salary}`);
+});
+//find id 
+console.log(employees.find(emp => emp.id === 105));
+
+
+const highEarners = employees.some(emp => emp.salary > 70000); //true
+console.log(highEarners);
+
+const allAdults = employees.every(emp => emp.age > 20);
+console.log(allAdults);
+
+//sort employees
+
+employees.sort((a, b) => a.id - b.id);
+console.log(employees);
