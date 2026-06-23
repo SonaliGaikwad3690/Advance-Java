@@ -1,0 +1,82 @@
+
+console.log("Hello JS");
+
+// create a list of 10 employees with different data ; 
+
+const employees = [
+  { id: 1, name: "Amit", role: "Java Developer", salary: 18000, city: "Pune" },
+  { id: 2, name: "Priya", role: "React Developer", salary: 25000, city: "Mumbai" },
+  { id: 3, name: "Rahul", role: "React Developer", salary: 19500, city: "Nagpur" },
+  { id: 4, name: "Neha", role: "Python Developer", salary: 32000, city: "Delhi" },
+  { id: 5, name: "Karan", role: "React Developer", salary: 50000, city: "Hyderabad" },
+  { id: 6, name: "Sneha", role: "Tester", salary: 17000, city: "Bangalore" },
+  { id: 7, name: "Rohit", role: "React Developer", salary: 120000, city: "Chennai" },
+  { id: 8, name: "Pooja", role: "Angular Developer", salary: 40000, city: "Indore" },
+  { id: 9, name: "Vikas", role: "React Developer", salary: 65000, city: "Ahmedabad" },
+  { id: 10, name: "Anjali", role: "Java Developer", salary: 21000, city: "Nashik" }
+];
+
+console.log(employees);
+
+let filteredEmployees = employees.filter(employee => employee.role === "React Developer");
+console.log(filteredEmployees);
+
+employees.forEach(employee => {
+  console.log(employee);
+});
+
+
+employees.forEach(emp => console.log(emp.name));
+employees.forEach(emp => console.log(emp.role));
+
+employees.forEach(emp => {
+    console.log(`${emp.name} - ${emp.role} - ${emp.salary}`);
+});
+//find id 
+console.log(employees.find(emp => emp.id === 105));
+
+
+const highEarners = employees.some(emp => emp.salary > 70000); //true
+console.log(highEarners);
+
+const allAdults = employees.every(emp => emp.age > 20);
+console.log(allAdults);
+
+//sort employees
+
+employees.sort((a, b) => a.id - b.id);
+console.log(employees);
+
+
+// modify the list contains only react devs 
+
+const reactDevs = employees.filter(emp => emp.role === "React Developer");
+
+console.log(reactDevs);
+
+// modify the list where if salary < 20000 , give hike of 15%
+
+const updatedSalaries = employees.map(emp => {
+  if (emp.salary < 20000) {
+    return { ...emp, salary: emp.salary * 1.15 };
+  }
+  return emp;
+});
+
+console.log(updatedSalaries);
+
+// modify the list in case where salary digit count > 5 digit
+const digitcount = employees.filter(emp => emp.salary.toString().length > 5);
+
+console.log(digitcount);
+
+// collect all the info & sample example of map & filter 
+const names = employees.map(emp => emp.name);
+console.log(names);
+
+
+// how it works with sinle value & objects
+const numbers = [1, 2, 3, 4, 5];
+
+const mulNumbers = numbers.map(num => num * 2);
+console.log(mulNumbers);
