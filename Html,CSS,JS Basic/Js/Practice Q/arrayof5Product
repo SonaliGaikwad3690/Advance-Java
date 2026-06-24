@@ -1,0 +1,17 @@
+console.log("Hello, this is the arrayof5Product.js file!")
+
+let products = [
+    { id: 1, name: "Laptop", price: 55000, category: "Electronics", qty: 10 },
+    { id: 2, name: "Mobile", price: 25000, category: "Electronics", qty: 0 },
+    { id: 3, name: "Shoes", price: 3000, category: "Fashion", qty: 15 },
+    { id: 4, name: "Backpack", price: 1800, category: "Accessories", qty: 20 },
+    { id: 5, name: "Headphones", price: 2000, category: "Electronics", qty: 30 }
+];
+
+// Remove product with qty = 0 and product with id = 4
+
+let updatedProducts = products.filter(product =>
+    product.qty !== 0 && product.id !== 4
+);
+//print the existiong modified array ...
+console.log(updatedProducts);
