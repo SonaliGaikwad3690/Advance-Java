@@ -1,0 +1,20 @@
+// the value and then i will assign the value on the next line ?  
+
+
+const rr ; 
+// const rr ; 
+
+// rr = "Vaibhav S"
+
+console.log("rr player = " , rr)
+//console.log("rr player = " , rr)
+
+
+// explore this as well as hoisting...
+
+// console.log(player)
+
+// let player = "sachin" ;
+
+
+
