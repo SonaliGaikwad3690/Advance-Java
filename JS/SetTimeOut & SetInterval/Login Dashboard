@@ -1,0 +1,94 @@
+// console.log("---------- CASE 1 ------------------")
+// console.log("start");
+
+// let isLoginn = false;
+
+// setTimeout(() => {
+
+//   isLoginn = true;
+//   console.log("login data is true")
+
+// }, 1000);
+
+// if (isLoginn) {
+//   console.log("login success..");
+// } else {
+//   console.log("login failed..");
+// }
+
+// ---------- CASE 2 ------------------
+
+// console.log("\n---------- CASE 2 ------------------")
+// console.log("start");
+
+// let isLogin = false;
+
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+
+//     isLogin = false;
+
+//     if (isLogin) {
+//       resolve("Login Success");
+//     } else {
+//       reject("Login failed");
+//     }
+//   }, 1000);
+// });
+
+// promise.then((res)=>{
+//     console.log(res, "\nopen dashboard...")
+// }).catch((err)=>{
+//     console.log(err, "\ncannot open dashboard")
+// })
+
+// const getData = () => {
+//   return new Promise((resovle, reject) => {
+//     setTimeout(() => {
+//       let data = true;
+
+//       if (data) {
+//         resovle("Data Recieved...");
+//       } else {
+//         reject("Data Not Recieved...");
+//       }
+//     }, 2000);
+//   });
+// };
+
+// const seeData = async () => {
+//   // let dt = getData().then((res)=>{
+//   //     console.log("success : " , res)
+//   // }).catch((err)=> {
+//   //     console.log("error : " , err)
+//   // })
+
+//   let dt = await getData();
+
+//   console.log("dt : ", dt);
+// };
+
+// seeData();
+
+const get = (api) => {
+  return new Promise((res, rej) => {
+    if (api === "http://localhost:8080/show-all") {
+      res("Data recieved");
+    } else {
+      rej("not recieved");
+    }
+  });
+};
+
+
+
+const getAllData = () => {
+
+    let dt = get('http://localhost:8080/show-all')
+             .then((r)=>{console.log("success : ", r)})
+             .catch((e)=>{console.log("error : ", e)})
+
+        
+}
+
+getAllData() ; 
