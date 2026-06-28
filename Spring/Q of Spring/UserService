@@ -1,0 +1,7 @@
+@Service
+public class UserService {
+
+    public String getUser() {
+        return "Admin";
+    }
+}
