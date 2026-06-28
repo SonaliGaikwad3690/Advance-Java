@@ -1,0 +1,7 @@
+@Service
+public class MessageService {
+
+    public String getMessage() {
+        return "Hello Spring Boot";
+    }
+}
