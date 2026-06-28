@@ -1,0 +1,25 @@
+@RestController
+@RequestMapping("/employees")
+public class EmployeeController {
+
+    List<Employee> employees = new ArrayList<>();
+
+    @PostMapping
+    public String addEmployee(@RequestBody Employee emp) {
+        employees.add(emp);
+        return "Employee Added";
+    }
+
+    @GetMapping
+    public List<Employee> getAllEmployees() {
+        return employees;
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteEmployee(@PathVariable int id) {
+
+        employees.removeIf(emp -> emp.getId() == id);
+
+        return "Employee Deleted";
+    }
+}
