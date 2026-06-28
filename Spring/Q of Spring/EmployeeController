@@ -1,0 +1,14 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.*;
+import com.example.demo.model.Employee;
+
+@RestController
+@RequestMapping("/employee")
+public class EmployeeController {
+
+    @GetMapping
+    public Employee getEmployee() {
+        return new Employee(101, "Sonali", 50000);
+    }
+}
