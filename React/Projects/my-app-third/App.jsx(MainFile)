@@ -1,0 +1,48 @@
+
+import './App.css'
+
+function App() {
+
+   let name = "Sonal";
+   let status = true;
+   function handleClick(name){
+    console.log("Button Clicked by JSX ", name);
+  }
+
+  let a = 10;
+  let b = 20;
+  let count=0;
+  const increaseCount = () => {
+    count++;
+    status=true;
+    console.log("Count = ", count);
+    console.log("Status = ", status);
+  };
+
+  return(
+  <div>
+    <center>
+     <h1>Hello From JS</h1>
+     <h2>Welcome in JSX....{name}</h2>
+     <h3>status : {status ? "Online" : "Offline"}</h3>
+     <h2>Count : {count}</h2>
+    <button onClick={() => handleClick(name)}>Click Me</button>
+    <button onClick={increaseCount}>Plus Count</button>
+
+    <h4>sum = {a+b}</h4>
+    <h4>sum = {a-b}</h4>
+    <h4>sum = {a/b}</h4>
+    <h4>sum = {a*b}</h4>
+    <h4>sum = {a%b}</h4>
+
+    </center>
+    </div>
+  )
+}
+
+export default App
+
+//In this file we can write javaScript code and along with that we can also write HTML code. 
+//We can also Access the vars, fuctions of Js Diretcly in html code.
+
+//Root Component (Parent of All Components)
