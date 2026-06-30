@@ -1,0 +1,47 @@
+
+import './App.css'
+
+function App() {
+  let name ="Sonal";
+  let status = true;
+
+
+  let a =10;
+  let b=20;
+  // let count=0;
+    
+  // count the digits in a number
+   let digit=35124;
+   let count=digit.toString().length;
+   console.log("Count of digit 35124 : ", count);
+
+     function handleClick(name){
+    console.log("Button Clicked by JSX ", name);
+  }
+
+    const increaseCount = () => {
+      // count++;
+    // console.log("Count after increment: ", count);
+    status="true";
+    console.log("status after increment: ", status);
+  }
+  return (
+    <center>
+      <div>
+        <h1>Welcome to JS</h1>
+        <h2>Hello , {name}!</h2>
+        <h3>{status ? "Status: Online" : "Status: Offline"}</h3>
+        <h2>count: {count}</h2>
+        <button onClick={()=>handleClick(name)}>Click Me</button>
+        <button onClick={increaseCount}>Increment</button>
+        <h4>sum : {a + b}</h4>
+        <h4>Minus : {a - b}</h4>
+        <h4>Mul : {a * b}</h4>
+        <h4>Div : {a / b}</h4>
+        <h4>Mod : {a % b}</h4>
+      </div>
+    </center>
+  )
+}
+
+export default App
