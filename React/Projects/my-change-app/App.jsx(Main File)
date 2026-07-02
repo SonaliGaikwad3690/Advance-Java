@@ -1,0 +1,33 @@
+import { useState } from 'react'
+import Sum from './Sum';
+import './App.css'
+
+function App() {
+  let [name, setName] = useState('user')
+
+  const handleDefault = () => {
+    setName('Default user')
+  }
+
+  const handleChange = (e) => {
+
+    console.log("from input= " + e.target.value)
+    setName(e.target.value)
+  }
+  return (
+    <>
+      <center>
+        <button onClick={handleDefault}>Set Default User</button>
+        {/* <button onClick={() => setName('Default user')}>Set Default User</button> */}
+        
+        <h3>Enter a user name </h3><input type="text" onChange={handleChange} />
+
+
+        <h1>Hello {name}</h1>
+        <Sum />
+        </center>
+    </>
+  )
+}
+
+export default App
