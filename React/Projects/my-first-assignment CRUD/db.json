@@ -1,0 +1,23 @@
+{
+  "employees": [
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "department": "Product"
+    },
+    {
+      "name": "raj",
+      "role": "dev",
+      "salary": 123456,
+      "id": "jxmTFZKedzE"
+    },
+    {
+      "name": "Sonal Gaikwad",
+      "role": "QA",
+      "salary": "240000",
+      "id": "QCReC9YM3Ms"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
