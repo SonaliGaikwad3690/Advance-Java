@@ -1,0 +1,29 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Rahul",
+      "role": "Developer",
+      "salary": 50000
+    },
+    {
+      "id": "2",
+      "name": "Sneha",
+      "role": "Tester",
+      "salary": 40000
+    },
+    {
+      "id": "O9fRYPhzlxg",
+      "name": "Sonal Gaikwad",
+      "role": "Devloper",
+      "salary": "70000"
+    },
+    {
+      "name": "Priya Gade",
+      "role": "Tester",
+      "salary": "25000",
+      "id": "oSNjpQvCPfg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
