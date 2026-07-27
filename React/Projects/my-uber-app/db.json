@@ -1,0 +1,29 @@
+{
+  "rides": [
+    {
+      "id": "4",
+      "name": "Sneha Joshi",
+      "pick": "Hadapsar",
+      "drop": "Magarpatta"
+    },
+    {
+      "id": "5",
+      "name": "Rohan Deshmukh",
+      "pick": "Swargate",
+      "drop": "FC Road"
+    },
+    {
+      "name": "Sonal Gaikwad",
+      "pick": "nigadi",
+      "drop": "pcmc",
+      "id": "PAAITDAI-Y8"
+    },
+    {
+      "name": "Sayali",
+      "pick": "nigadi",
+      "drop": "pcmc",
+      "id": "YibPp62FNBQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
