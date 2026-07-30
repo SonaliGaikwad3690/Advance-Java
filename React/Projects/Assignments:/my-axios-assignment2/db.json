@@ -1,0 +1,23 @@
+{
+  "employees": [
+    {
+      "name": "Sonal",
+      "city": "Solapur",
+      "college": "NCER",
+      "id": "Mh0E5gEJRns"
+    },
+    {
+      "name": "Om",
+      "city": "Mohol",
+      "college": "PCCOE",
+      "id": "PQjp-fyO1GA"
+    },
+    {
+      "name": "Raj",
+      "city": "Kolhapur",
+      "college": "Gove",
+      "id": "bK5zbZeg-ro"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
