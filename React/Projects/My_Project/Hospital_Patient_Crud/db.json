@@ -1,0 +1,77 @@
+{
+  "patients": [
+    {
+      "id": "1",
+      "patientId": "P001",
+      "name": "Rahul Sharma",
+      "age": 32,
+      "gender": "Male",
+      "doctorName": "Dr. Amit Kumar",
+      "department": "Cardiology",
+      "mobileNum": "9876543210",
+      "email": "rahul.sharma@example.com",
+      "status": "Admitted"
+    },
+    {
+      "id": "2",
+      "patientId": "P002",
+      "name": "Priya Patil",
+      "age": 28,
+      "gender": "Female",
+      "doctorName": "Dr. Neha Joshi",
+      "department": "Gynecology",
+      "mobileNum": "9123456789",
+      "email": "priya.patil@example.com",
+      "status": "Discharged"
+    },
+    {
+      "id": "3",
+      "patientId": "P003",
+      "name": "Amit Verma",
+      "age": 45,
+      "gender": "Male",
+      "doctorName": "Dr. Rajesh Singh",
+      "department": "Orthopedics",
+      "mobileNum": "9988776655",
+      "email": "amit.verma@example.com",
+      "status": "Under Treatment"
+    },
+    {
+      "id": "4",
+      "patientId": "P004",
+      "name": "Sneha Kulkarni",
+      "age": 36,
+      "gender": "Female",
+      "doctorName": "Dr. Pooja Mehta",
+      "department": "Neurology",
+      "mobileNum": "9012345678",
+      "email": "sneha.kulkarni@example.com",
+      "status": "Admitted"
+    },
+    {
+      "id": "5",
+      "patientId": "P005",
+      "name": "Rohan Deshmukh",
+      "age": 51,
+      "gender": "Male",
+      "doctorName": "Dr. Vivek Shah",
+      "department": "General Medicine",
+      "mobileNum": "9871234560",
+      "email": "rohan.deshmukh@example.com",
+      "status": "Discharged"
+    },
+    {
+      "patientId": "7",
+      "name": "Sona",
+      "age": "23",
+      "gender": "f",
+      "doctorName": "s",
+      "department": "s",
+      "mobileNum": "8975093258098",
+      "email": "sonaligaikwad3690@gmail.com",
+      "status": "Admit",
+      "id": "aOFh32e-6FY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
