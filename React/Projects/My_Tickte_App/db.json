@@ -1,0 +1,17 @@
+{
+  "tickets": [
+    {
+      "id": "2",
+      "name": "Raniiiiiiiiii"
+    },
+    {
+      "id": "3vBMv7lm03s",
+      "name": "Raj"
+    },
+    {
+      "name": "Sonal",
+      "id": "zeD9xxvRuLw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
