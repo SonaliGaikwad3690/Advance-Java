@@ -1,0 +1,17 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "name": "Sonal Gaiwkad",
+      "order": "Snacks",
+      "qty": 2
+    },
+    {
+      "id": "_CRS-a1TyEw",
+      "name": "Payal Chavan",
+      "order": "Roti",
+      "qty": "1"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
