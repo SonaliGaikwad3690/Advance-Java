@@ -1,0 +1,14 @@
+welcome to first App
+Name:
+
+Order:
+
+Quantity:
+
+Status:
+
+Place Order
+Name	Order	Quantity	Status	Action
+Sonal Gaiwkad	Snacks	2	pending	Delete OrderUpdate Order
+raj	Roll	2	Recieve	Delete OrderUpdate Order
+Payal Chavan	Rice	5	Placed	Delete OrderUpdate Order
