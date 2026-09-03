@@ -1,0 +1,19 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "name": "Sonal G",
+      "orderName": "tea",
+      "qty": 2,
+      "status": "pending"
+    },
+    {
+      "id": "b7rm9Tslg0U",
+      "name": "raj",
+      "orderName": "Roll",
+      "qty": "2",
+      "status": "Recieve"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
